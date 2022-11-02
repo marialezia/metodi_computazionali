@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+dati = pd.read_csv('fit_data.csv')
+print(dati)
+x = dati['x']
+y = dati['y']
+
+plt.plot(x,y,'.')
+plt.show()
