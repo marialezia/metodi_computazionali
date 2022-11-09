@@ -1,0 +1,16 @@
+import numpy as np
+from scipy import integrate
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def dthdt(w):
+    return w
+
+def dwdt(th, g, l):
+    return -g*np.sin(th)/l
+
+l = 0.5
+th0 = np.pi/4
+w0 = 0
+
+
