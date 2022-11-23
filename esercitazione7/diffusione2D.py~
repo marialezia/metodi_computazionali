@@ -1,0 +1,22 @@
+import sys
+import numpy as np
+import scipy
+import matplotlib.pyplot as plt
+
+def random_walk(step, N):
+    deltax = np.zeros(N)
+    deltay = np.zeros(N)
+    tmpx = 0
+    tmpy = 0
+    phi = np.random.uniform(low = 0, high = 2*np.pi, size = N)
+    for i in phi:
+        tmpx = tmpx+step*np.cos(phi[i])
+        tmpy = tmpy+step*np.sin(phi[i])
+        deltax[i+1] = tmpx
+        deltay[i+1] = tmpy
+    return deltax, deltay
+
+for i in range(5):
+    plt.plot(random_walk(1,1000))
+
+plt.show()
