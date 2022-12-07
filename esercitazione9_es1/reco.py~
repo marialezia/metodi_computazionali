@@ -1,0 +1,31 @@
+import numpy as np
+
+class Hit:
+    """ 
+    oggetto di tipo Hit ha informazioni su 
+    - Id Modulo
+    - Id sensore
+    - Time Stamp rivelazione
+    """
+    def __init__(self, modulo, sensore, time):
+        self.modulo = modulo
+        self.sensore = sensore
+        self.time = time
+
+
+class Event:
+    """ oggetto di tipo Event ha informazioni su: 
+    - numero di Hit
+    - time stamp primo hit
+    - time stamp ultimo hit
+    - durata temporale
+    - array di tutti gli hit
+    """
+    def __init__(self, numero, time_p, time_u, durata, hit):
+        self.numero = numero
+        self.time_p = time_p
+        self.time_u = time_u
+        self.durata = durata
+        self.hit = hit
+
+    

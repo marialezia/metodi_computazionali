@@ -1,0 +1,11 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#leggo dati da file csv
+M0 = pd.read_csv('hit_times_M0.csv')
+M1 = pd.read_csv('hit_times_M1.csv')
+M2 = pd.read_csv('hit_times_M2.csv')
+M3 = pd.read_csv('hit_times_M3.csv')
+
+print(M0)
