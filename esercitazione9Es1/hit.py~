@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import sys, os
+import pandas as pd
+import reco
+
+#definisco funzione
+def funzione(tabella):
+    
+
+
+#leggo dati da file csv
+M0 = pd.read_csv('hit_times_M0.csv')
+M1 = pd.read_csv('hit_times_M1.csv')
+M2 = pd.read_csv('hit_times_M2.csv')
+M3 = pd.read_csv('hit_times_M3.csv')
+
+'''
+aa = np.arange(10)
+bb = np.array([aa**2 for a in aa])
+
+bb = np.array([aa**2 for a in aa if a > 5])
+
+
+ for i in range(len(self.hit)):
+            if self.hit[i] > hit:
+                self.hit = np.insert(self.hit, i, hit)
+'''
+
