@@ -15,6 +15,8 @@ class Hit:
     def __gt__(self, altro):
         return self.time > altro.time
 
+    
+
 
 class Event:
     """ oggetto di tipo Event ha informazioni su: 
@@ -46,4 +48,8 @@ class Event:
             self.time_p = hit.time
         self.time_u = hit.time
         self.durata = self.time_u - self.time_p
-        
+
+    def __str__(self):
+        return 'Evento con ' + str(self.numero) + ' hits \n time stamp primo hit = ' + str(self.time_p) + ' \n time stamp ultimo hit =  ' + str(self.time_u) + ' \n durata = ' + str(self.durata)
+
+    

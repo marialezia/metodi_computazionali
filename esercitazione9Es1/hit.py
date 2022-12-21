@@ -18,10 +18,10 @@ def hit_arr(tabella):
     
     return arr
 
-def arrayEventi(arrayHit, threshold, deltaTimes):
-    eventi = np.array([reco:event()])
-    for i in range(len(arrayHit)):
-        if DeltaTimes[i]>threshold:
+def arrayEventi(arrayHit, threshold):
+    eventi = np.array([reco.Event()])
+    for i in range(len(arrayHit)-1):
+        if arrayHit[i+1].time - arrayHit[i].time>threshold:
             eventi = np.append(eventi, reco.Event())
         eventi[-1].aggiungi_hit(arrayHit[i])
     return eventi
@@ -56,9 +56,10 @@ plt.hist(np.log10(hitDeltaTimes[mask]), bins = 70, color = 'pink', ec = 'black')
 plt.xlabel('differenza tempi scala log10')
 plt.show()
 
-events = arrayEventi(hit, 10**2, hitDeltaTimes)
+events = arrayEventi(hit, 10**2)
 
-
+for i in range(10):
+    print(events[i])
 
 #finestra temporale da applicare a deltaT è 10^2 ns 
 
