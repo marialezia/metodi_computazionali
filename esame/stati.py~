@@ -1,0 +1,18 @@
+import pandas as pd
+import indici as ind
+
+data = pd.read_csv('pollution_us_2005_2007.csv')
+
+'''california = pd.DataFrame()
+mexico = pd.DataFrame()
+kansas = pd.DataFrame()
+newyork = pd.DataFrame()
+illinois = pd.DataFrame()
+'''
+statecode = data['State Code'].values
+
+
+indexCal = ind.Index(statecode, 6)
+california = ind.Tab(indexCal, data)
+
+california.to_csv('california.csv', index = False)
