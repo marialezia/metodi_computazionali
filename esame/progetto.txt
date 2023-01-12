@@ -24,4 +24,21 @@ Kansas (20)
 New York (36)
 Illinois (17)
 
+2-scrivere una funzione che per le date uguali fa una media dei valori associa come errore la deviazione standard
+potrei creare una classe dato che contiente i dati sulle colonne: 
+class Dato 
+--> data
+--> country code
+--> site num
+--> SO2 + err
+--> No2 + err
+--> CO + err
+--> O3 + err
+
+Class Stato 
+--> array di Dati
+--> numero di dati 
+--> altri parametri da vedere 
+
+
 

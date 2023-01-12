@@ -1,0 +1,24 @@
+import numpy as np
+import pandas as pd
+import classi as cl
+import funzioni as fz
+from tqdm import tqdm
+
+#leggo dati da csv
+ks = pd.read_csv('kansas.csv')
+#cl = pd.read_csv('newCalifornia.csv')
+#ny = pd.read_csv('newNewyork.csv')
+#il = pd.read_csv('newIllinois.csv')
+#mx = pd.read_csv('newMexico.csv')
+
+#a partire dai dati mediante l'utilizzo della funzione riempiStato creo degli oggetti stato che contendono i dati di ogni giorno, i giorni ripetuti si è fatta una media associando come errore la deviazione standard tra i valori misurati
+
+kansas = fz.riempiStato(ks, 'Kansas')
+#california = fz.riempiStato(cl, 'California')
+#newyork = fz.riempiStato(ny, 'New York')
+#illinois = fz.riempiStato(il, 'Illinois')
+#mexico = fz.riempiStato(mx, 'Mexico')
+
+
+kansasDf = fz.tabStato(kansas)
+print(kansasDf)
